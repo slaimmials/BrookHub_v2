@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -28,8 +33,10 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = ScreenGui
+MainFrame.Active = true
 MainFrame.BackgroundColor3 = Color3.fromRGB(0, 130, 177)
 MainFrame.Position = UDim2.new(0.0381263644, 0, 0.506109953, 0)
+MainFrame.Selectable = true
 MainFrame.Size = UDim2.new(0, 656, 0, 434)
 
 UICorner.Parent = MainFrame
@@ -54,7 +61,7 @@ TextButton.Parent = UpperFrame
 TextButton.BackgroundColor3 = Color3.fromRGB(0, 90, 118)
 TextButton.BorderSizePixel = 0
 TextButton.Position = UDim2.new(0.0141742192, 0, 0.122819759, 0)
-TextButton.Size = UDim2.new(0, 173, 0, 30)
+TextButton.Size = UDim2.new(0.280844152, 0, 0.714285731, 0)
 TextButton.Font = Enum.Font.Unknown
 TextButton.Text = "Exploit"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -89,7 +96,7 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.0137457047, 0, 0.0833333358, 0)
-TextLabel.Size = UDim2.new(0, 178, 0, 50)
+TextLabel.Size = UDim2.new(0.305841923, 0, 0.833333313, 0)
 TextLabel.Font = Enum.Font.Unknown
 TextLabel.Text = "Tp bike to player"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -104,7 +111,7 @@ TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 97, 127)
 TextButton_2.BorderSizePixel = 0
 TextButton_2.Position = UDim2.new(0.689003587, 0, 0.0833333358, 0)
-TextButton_2.Size = UDim2.new(0, 170, 0, 50)
+TextButton_2.Size = UDim2.new(0.292096227, 0, 0.833333313, 0)
 TextButton_2.Font = Enum.Font.Unknown
 TextButton_2.Text = "『 OFF 』"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -122,7 +129,7 @@ TextBox.BackgroundColor3 = Color3.fromRGB(0, 90, 118)
 TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
 TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.324742258, 0, 0.0833333358, 0)
-TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Size = UDim2.new(0.343642622, 0, 0.833333313, 0)
 TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.Unknown
 TextBox.PlaceholderText = "Player nickname"
@@ -137,11 +144,11 @@ UICorner_7.Parent = TextBox
 UITextSizeConstraint_4.Parent = TextBox
 UITextSizeConstraint_4.MaxTextSize = 20
 
-TextLabel_2.Parent = ScreenGui
+TextLabel_2.Parent = MainFrame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.0495702028, 0, 0.512219965, 0)
+TextLabel_2.Position = UDim2.new(0.0312775224, 0, 0.0145241022, 0)
 TextLabel_2.Size = UDim2.new(0, 622, 0, 28)
 TextLabel_2.Font = Enum.Font.FredokaOne
 TextLabel_2.Text = "BrookHaven Hub                                                    made by slaimmials"
@@ -151,9 +158,23 @@ TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function VAECYGH_fake_script() -- TextButton_2.LocalScript 
+local function LMQQ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.Font = Enum.Font.Sarpanch
+end
+coroutine.wrap(LMQQ_fake_script)()
+local function JGFVBDT_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	script.Parent.Font = Enum.Font.SourceSans
+end
+coroutine.wrap(JGFVBDT_fake_script)()
+local function MPFAVW_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
+	script.Parent.TextSize = 26
+	
 	local cc = 0
 	
 	local function startRide()
@@ -178,10 +199,18 @@ local function VAECYGH_fake_script() -- TextButton_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VAECYGH_fake_script)()
-local function LTPQIQD_fake_script() -- MainFrame.LocalScript 
+coroutine.wrap(MPFAVW_fake_script)()
+local function TBJEEQR_fake_script() -- TextBox.LocalScript 
+	local script = Instance.new('LocalScript', TextBox)
+
+	script.Parent.TextSize = 20
+end
+coroutine.wrap(TBJEEQR_fake_script)()
+local function CZBWUI_fake_script() -- MainFrame.LocalScript 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	script.Parent.Draggable = true
+	script.Parent.Selectable = true
+	
 end
-coroutine.wrap(LTPQIQD_fake_script)()
+coroutine.wrap(CZBWUI_fake_script)()
