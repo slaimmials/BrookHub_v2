@@ -195,6 +195,7 @@ local function DHWFGM_fake_script() -- TextButton_2.LocalScript
 	local function startRide()
 		while wait(0.01) do
 			game:GetService("Workspace").WorkspaceCom["001_MotorCycle"].MotorCycle.VehicleSeat1.CFrame = game.Players[script.Parent.Parent.TextBox.Text].Character.HumanoidRootPart.CFrame
+			game:GetService("Workspace").WorkspaceCom["002_MotorCycle"].MotorCycle.VehicleSeat1.CFrame = game.Players[script.Parent.Parent.TextBox.Text].Character.HumanoidRootPart.CFrame
 			if cc == 0 then
 				break
 			end
